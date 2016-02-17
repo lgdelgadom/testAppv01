@@ -31,34 +31,34 @@ namespace WorkingWithNavigation
 				TextColor = Color.White,
 				BackgroundColor = Color.FromRgb(220,40,28),
 				WidthRequest = 290,
-
-			};
-			Entry Nombre = new Entry {
-				WidthRequest = 290,
-				Placeholder = "Nombre",
-				TextColor = Color.FromRgba(0,0,0,50),
-				HeightRequest = 40
+				 
 			};
 
-			Entry Apellido = new Entry {
-				WidthRequest = 290,
-				Placeholder = "Apellido",
-				TextColor = Color.FromRgba(0,0,0,50),
-				HeightRequest = 40
-			};
+			TableView RegisterForm = new TableView {
+				Intent = TableIntent.Form,
+				Root = new TableRoot{
+					new TableSection {
+						new EntryCell{
+							Placeholder = "Nombre",
+							Keyboard=Keyboard.Default
+						},
 
-			Entry Celular = new Entry {
-				WidthRequest = 290,
-				Placeholder = "Celular",
-				TextColor = Color.FromRgba(0,0,0,50),
-				HeightRequest = 40
-			};
+						new EntryCell{
+							Placeholder = "Apellido",
+							Keyboard = Keyboard.Default
+						},
 
-			Entry Correo = new Entry {
-				WidthRequest = 290,
-				Placeholder = "Correo",
-				TextColor = Color.FromRgba(0,0,0,50),
-				HeightRequest = 40
+						new EntryCell{
+							Placeholder = "Celular",
+							Keyboard = Keyboard.Telephone
+						},
+
+						new EntryCell{
+							Placeholder = "Correo",
+							Keyboard = Keyboard.Email
+						}
+					}
+				}
 			};
 
 			Button Registrar = new Button {
